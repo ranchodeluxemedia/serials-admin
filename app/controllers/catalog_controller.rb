@@ -120,7 +120,7 @@ class CatalogController < ApplicationController
     #config.add_show_field 'isbn_t', :label => 'ISBN:'
     config.add_show_field 'id', :label=>'SFX Object ID: '
     config.add_show_field 'catkey', :label=>'Catkey: '
-    config.add_show_field 'issn', :label=>'ISSN: '
+    #config.add_show_field 'issn', :label=>'ISSN: '
     config.add_show_field 'issnPrint', :label=>'Print ISSN: '
     config.add_show_field 'issnElectronic', :label=>'Electronic ISSN: '
     config.add_show_field 'issnINCORRECT', :label=>'Incorrect ISSN: '

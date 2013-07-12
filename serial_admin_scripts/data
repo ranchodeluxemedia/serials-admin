@@ -1,0 +1,14 @@
+Data files for use in serials_admin:
+-- sfx-sirsi-full.txt
+-- sfx-sirsi-incremental.txt
+-- badissn.txt: "Bad issn" catkey|display_isbn|isbn
+-- holderr.txt: catkey|display isbn \n summary holdings comparisons
+-- noissn.txt: Title
+-- hasRelatedRecs.txt: catkey|display_isbn|isbn|object_id
+-- matchissn.txt: catkey|display isbn|isbn|"Pub Dates OK"
+-- noRelatedRecs.txt: catkey|display isbn|isbn|object id
+-- notSFX.txt: isbn|display isbn|catkey|856z (text)
+-- noURL.txt: catkey|?? e.g. MACEWAN456000|object id|URL|language
+-- singleHold.txt: "original holding="|catkey|display isbn|"new holding=" \n "original holdingFr="|catkey|display isbn|"new holding="
+-- unchangedPubDates.txt: isbn|display isbn|catkey|856z (text)
+-- sfxdata.xml

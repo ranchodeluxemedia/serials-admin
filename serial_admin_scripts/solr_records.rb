@@ -75,7 +75,7 @@ class SolrRecords
     File.open("#{@args['data_dir']}/#{@args['matchissn']}").each_line do |line|
       split_rec = line.split("|")
       match = Struct.new :catkey, :issn, :display_issn, :pubDateNote
-      m = match.new(split_rec.first, split_rec[1].strip.downcase, split_rec[2]i.strip.downcase, split_rec[3])
+      m = match.new(split_rec.first, split_rec[1].strip.downcase, split_rec[2].strip.downcase, split_rec[3])
       matched_records[m.display_issn] = m
     end
   end

@@ -25,7 +25,7 @@ class CatalogController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.show_link = 'titleExact'
-    config.index.record_display_type = 'format'
+    config.index.record_display_type = 'ua_format'
 
     # solr field configuration for document/show views
     config.show.html_title = 'titleExact'
@@ -66,17 +66,13 @@ class CatalogController < ApplicationController
      #  :years_25 => { :label => 'within 25 Years', :fq => "pub_date:[#{Time.now.year - 25 } TO *]" }
     #}
 
-    config.add_facet_field 'okinsirsi', :label=>'Monograph Serials'
-    config.add_facet_field 'multiCatKey', :label=>'Multiple Catkeys'
-    config.add_facet_field 'singleTarget', :label=>'Single Target'
-    config.add_facet_field 'cat', :label=>'Main Topic'
-    config.add_facet_field 'subcat', :label=>'Subtopic'
-    config.add_facet_field 'language', :label=>'Language'
-    config.add_facet_field 'freeJournal', :label=>'Free'
-    config.add_facet_field 'target', :label=>'Targets'
-    config.add_facet_field 'sirsiPubDateNotes', :label=>'Sirsi Date Notes'
-    config.add_facet_field 'inSFX', :label=>'In SFX Only'
-    config.add_facet_field 'inSirsi', :label=>'In Sirsi Only'
+    config.add_facet_field 'ua_singleTarget', :label=>'Single Target'
+    config.add_facet_field 'ua_language', :label=>'Language'
+    config.add_facet_field 'ua_freeJournal', :label=>'Free'
+    config.add_facet_field 'ua_target', :label=>'Targets'
+    config.add_facet_field 'ua_sirsiPubDateNotes', :label=>'Sirsi Date Notes'
+    config.add_facet_field 'ua_inSFX', :label=>'In SFX Only'
+    config.add_facet_field 'ua_inSirsi', :label=>'In Sirsi Only'
 
 
     # Have BL send all facet field names to Solr, which has been the default
@@ -96,9 +92,9 @@ class CatalogController < ApplicationController
     #config.add_index_field 'published_vern_display', :label => 'Published:'
     #config.add_index_field 'lc_callnum_display', :label => 'Call number:'
     #config.add_index_field 'catkey', :label=>'CatKey: '
-    config.add_index_field 'title', :label=>'Title: '
-    config.add_index_field 'id', :label=>'SFX Object ID: '
-    config.add_index_field 'issn', :label=>'ISSN: '
+    config.add_index_field 'ua_title', :label=>'Title: '
+    config.add_index_field 'ua_id', :label=>'SFX Object ID: '
+    config.add_index_field 'ua_issn', :label=>'ISSN: '
 
 
 
@@ -119,17 +115,17 @@ class CatalogController < ApplicationController
     #config.add_show_field 'lc_callnum_display', :label => 'Call number:'
     #config.add_show_field 'isbn_t', :label => 'ISBN:'
     config.add_show_field 'id', :label=>'SFX Object ID: '
-    config.add_show_field 'catkey', :label=>'Catkey: '
+    config.add_show_field 'ua_catkey', :label=>'Catkey: '
     #config.add_show_field 'issn', :label=>'ISSN: '
-    config.add_show_field 'issnPrint', :label=>'Print ISSN: '
-    config.add_show_field 'issnElectronic', :label=>'Electronic ISSN: '
-    config.add_show_field 'issnINCORRECT', :label=>'Incorrect ISSN: '
-    config.add_show_field 'target', :label=>'Targets: '
-    config.add_show_field 'inSFX', :label=>'In SFX? '
-    config.add_show_field 'inSirsi', :label=>'In Sirsi? '
-    config.add_show_field 'singleTarget', :label=>'Single Target? '
-    config.add_show_field 'previousTitle', :label=>'Previous Title: '
-    config.add_show_field 'laterTitle', :label=>'Later Title: '
+    config.add_show_field 'ua_issnPrint', :label=>'Print ISSN: '
+    config.add_show_field 'ua_issnElectronic', :label=>'Electronic ISSN: '
+    config.add_show_field 'ua_issnINCORRECT', :label=>'Incorrect ISSN: '
+    config.add_show_field 'ua_target', :label=>'Targets: '
+    config.add_show_field 'ua_inSFX', :label=>'In SFX? '
+    config.add_show_field 'ua_inSirsi', :label=>'In Sirsi? '
+    config.add_show_field 'ua_singleTarget', :label=>'Single Target? '
+    config.add_show_field 'ua_previousTitle', :label=>'Previous Title: '
+    config.add_show_field 'ua_laterTitle', :label=>'Later Title: '
 
     # config.add_show_field 'marcFetched', :label=>'MARC Fetched? ' # not sure what this even is
     # config.add_show_field 'sirsiUrl', :label=>'Sirsi URL: ' # necessary?
@@ -154,14 +150,14 @@ class CatalogController < ApplicationController
     config.add_show_field 'language', :label=>'Language: '
     #config.add_show_field 'sirsiMatchSource', :label=>'Sirsi Match Source: '
     #config.add_show_field 'sirsiMatchDate', :label=>'Sirsi Match Date: '
-    config.add_show_field 'status', :label=>'Status: '
-    config.add_show_field 'freeJournal', :label=>'Free? '
-    config.add_show_field 'placeExact', :label=>'Place of Publication: '
-    config.add_show_field 'publisherExact', :label=>'Publisher: '
+    config.add_show_field 'ua_status', :label=>'Status: '
+    config.add_show_field 'ua_freeJournal', :label=>'Free? '
+    config.add_show_field 'ua_placeExact', :label=>'Place of Publication: '
+    config.add_show_field 'ua_publisherExact', :label=>'Publisher: '
     # config.add_show_field 'sfxHoldings', :label=>'SFX Holdings: ' Not sure what this is supposed to be. This is actually the dateStatement
-    config.add_show_field 'dateStatement', :label=>'Coverage: '
-    config.add_show_field 'alternateCatKey', :label=>'Alternate Catkey: '
-    config.add_show_field 'lastUpdated', :label=>'Last Updated: '
+    config.add_show_field 'ua_dateStatement', :label=>'Coverage: '
+    config.add_show_field 'ua_alternateCatKey', :label=>'Alternate Catkey: '
+    config.add_show_field 'ua_lastUpdated', :label=>'Last Updated: '
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields

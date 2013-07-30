@@ -587,60 +587,11 @@
    <dynamicField name="*_sort" type="alphaOnlySort" indexed="true" stored="false" multiValued="false" />
    <dynamicField name="*_unstem_search" type="text_general" indexed="true" stored="false" multiValued="true" />
    <dynamicField name="*spell" type="textSpell" indexed="true" stored="false" multiValued="true" />
+   <dynamicField name="ua_*" type="text" indexed="false" stored="false" multiValued="false" />
 
-<field name="okinsirsi" type="boolean" indexed="true" stored="true"/>
-		<field name="identifiers" type="text" indexed="true" stored="false" multiValued="true"/>
-		<field name="search-all" type="text" indexed="true" stored="false" multiValued="true"/>
-		<field name="title" type="string" indexed="true" stored="true"/>
-		<field name="titleExact" type="string" indexed="true" stored="true"/>
-		<field name="issnPrint" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="issnElectronic" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="issnINCORRECT" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="issn" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="catkey" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="target" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="inSFX" type="boolean" indexed="true" stored="true"/>
-		<field name="inSirsi" type="boolean" indexed="true" stored="true"/>
-		<field name="multiCatKey" type="boolean" indexed="true" stored="true"/>
-		<field name="marcFetched" type="boolean" indexed="true" stored="true"/>
-		<field name="sirsiUrl" type="string" indexed="false" stored="true" multiValued="true"/>
-		<field name="sirsiDomain" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="from-year" type="sint" indexed="true" stored="true"/>
-		<field name="from-volume" type="string" indexed="true" stored="true"/>
-		<field name="from-issue" type="string" indexed="true" stored="true"/>
-		<field name="to-year" type="sint" indexed="true" stored="true"/>
-		<field name="to-volume" type="string" indexed="true" stored="true"/>
-		<field name="to-issue" type="string" indexed="true" stored="true"/>
-		<field name="embargo-days" type="sint" indexed="true" stored="true"/>
-		<field name="sirsiTitle" type="text" indexed="true" stored="false" multiValued="true"/>
-		<field name="sirsiTitleExact" type="string" indexed="false" stored="true" multiValued="true"/>
-		<field name="sirsiHoldings" type="string" indexed="false" stored="true" multiValued="true"/>
-		<field name="sirsiPubDateNotes" type="string" indexed="true" stored="true"/>
-		<field name="cat" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="subcat" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="catText" type="text" indexed="true" stored="true" multiValued="true"/>
-		<field name="subcatText" type="text" indexed="true" stored="true" multiValued="true"/>
-		<field name="ejdb" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="peerReviewed" type="boolean" indexed="true" stored="true"/>
-		<field name="language" type="string" indexed="true" stored="true"/>
-		<field name="sirsiMatchSource" type="string" indexed="true" stored="true"/>
-		<field name="sirsiMatchDate" type="date" indexed="true" stored="true"/>
-		<field name="sirsiMatchLastInsert" type="date" indexed="true" stored="true"/>
-		<field name="status" type="string" indexed="true" stored="true" multiValued="true"/>
-		<field name="freeJournal" type="boolean" indexed="true" stored="true"/>
-		<field name="place" type="text" indexed="true" stored="false"/>
-		<field name="publisher" type="text" indexed="true" stored="false"/>
-		<field name="placeExact" type="string" indexed="true" stored="true"/>
-		<field name="publisherExact" type="string" indexed="true" stored="true"/>
-		<field name="sfxHoldings" type="string" indexed="false" stored="true"/>
-		<field name="alternateCatKey" type="string" indexed="false" stored="true"/>
-		 <field name="dateStatement" type="string" indexed="false" stored="true"/>
-		 <field name="singleTarget" type="boolean" indexed="true" stored="true"/>
-		 <field name="previousTitle" type="string" indexed="true" stored="true"/>
-		 <field name="laterTitle" type="string" indexed="true" stored="true"/>
-		 <field name="link_text" type="string" indexed="true" stored="true"/>
-		 <field name="lastUpdated" type="string" indexed="true" stored="true"/>
 
+  <field name="identifiers" type="text" indexed="true" stored="false" multiValued="true"/>
+  <field name="ua_target" type="text" indexed="true" stored="true" multiValued="true" />
 
    <!-- uncomment the following to ignore any fields that don't already match an existing 
         field name or dynamic field, rather than reporting them as an error. 
@@ -713,29 +664,6 @@
    <copyField source="subject_t" dest="opensearch_display"/>
    <copyField source="subject_addl_t" dest="opensearch_display"/>  
 
-        <copyField source="title" dest="titleExact"/>
-	<copyField source="title" dest="identifiers"/>
-	<copyField source="sirsiTitle" dest="sirsiTitleExact"/>
-	<copyField source="sirsiTitle" dest="identifiers"/>
-	<copyField source="id" dest="identifiers"/>
-	<copyField source="catkey" dest="identifiers"/>
-	<copyField source="issn" dest="identifiers"/>
-	<copyField source="target" dest="identifiers"/>
-	<copyField source="sirsiDomain" dest="identifiers"/>
-	<copyField source="cat" dest="catText"/>
-	<copyField source="subcat" dest="subcatText"/>
-	<copyField source="place" dest="placeExact"/>
-	<copyField source="publisher" dest="publisherExact"/>
-	<copyField source="issnPrint" dest="issn"/>
-	<copyField source="issnElectronic" dest="issn"/>
-	<copyField source="issnPrint" dest="identifiers"/>
-	<copyField source="issnElectronic" dest="identifiers"/>
-	<copyField source="title" dest="search-all"/>
-	<copyField source="issn" dest="search-all"/>
-	<copyField source="subcat" dest="search-all"/>
-	<copyField source="issnPrint" dest="search-all"/>
-	<copyField source="issnElectronic" dest="search-all"/>
-	<copyField source="singleTarget" dest="search-all"/>
    <!-- Above, multiple source fields are copied to the [text] field. 
 	  Another way to map multiple source fields to the same 
 	  destination field is to use the dynamic field syntax. 

@@ -25,25 +25,25 @@ class SolrRecord
   def to_xml
 
     xml_record = "<doc><field name=\"id\">#{object_id}</field>\
-    <field name=\"title\">#{title}</field>\
-    <field name=\"issnPrint\">#{issnPrint}</field>\
-    <field name=\"issnElectronic\">#{issnElectronic}</field>\
-    <field name=\"freeJournal\">#{freeJournal}</field>\
-    <field name=\"place\">#{place}</field>\
-    <field name=\"publisher\">#{publisher}</field>\
-    <field name=\"language\">#{language}</field>\
-    <field name=\"catkey\">#{catkey}</field>\
-    <field name=\"sirsiPubDateNotes\">#{pubDateNotes}</field>\
-    <field name=\"singleTarget\">#{singleTarget}</field>\
-    <field name=\"noISSN\">#{noISSN}</field>\
-    <field name=\"matched\">#{matched}</field>\
-    <field name=\"bad_dates\">#{bad_dates}</field>\
-    <field name=\"bad_issn\">#{bad_issn}</field>\
-    <field name=\"bad_issn_statement\">${bad_issn_statement}</field>\
-    <field name=\"no_url\">#{no_url}</field>\
-    <field name=\"holdings_comparison\">#{holdings_comparison}</field>\
-    <field name=\"dateStatement\">#{dateStatement}</field>\
-    <field name=\"inSFX\">true</field>"
+    <field name=\"ua_title\">#{title}</field>\
+    <field name=\"ua_issnPrint\">#{issnPrint}</field>\
+    <field name=\"ua_issnElectronic\">#{issnElectronic}</field>\
+    <field name=\"ua_freeJournal\">#{freeJournal}</field>\
+    <field name=\"ua_place\">#{place}</field>\
+    <field name=\"ua_publisher\">#{publisher}</field>\
+    <field name=\"ua_language\">#{language}</field>\
+    <field name=\"ua_catkey\">#{catkey}</field>\
+    <field name=\"ua_sirsiPubDateNotes\">#{pubDateNotes}</field>\
+    <field name=\"ua_singleTarget\">#{singleTarget}</field>\
+    <field name=\"ua_noISSN\">#{noISSN}</field>\
+    <field name=\"ua_matched\">#{matched}</field>\
+    <field name=\"ua_bad_dates\">#{bad_dates}</field>\
+    <field name=\"ua_bad_issn\">#{bad_issn}</field>\
+    <field name=\"ua_bad_issn_statement\">${bad_issn_statement}</field>\
+    <field name=\"ua_no_url\">#{no_url}</field>\
+    <field name=\"ua_holdings_comparison\">#{holdings_comparison}</field>\
+    <field name=\"ua_dateStatement\">#{dateStatement}</field>\
+    <field name=\"ua_inSFX\">true</field>"
 
     xml_record+=split_targets
     xml_record+="</doc>"
@@ -56,7 +56,7 @@ class SolrRecord
     temp_string=""
     ts=targets.split(",")
     ts.each do |t|
-      temp_string+="<field name=\"target\">#{t.strip}</field>"
+      temp_string+="<field name=\"ua_target\">#{t.strip}</field>"
     end
     temp_string
   end

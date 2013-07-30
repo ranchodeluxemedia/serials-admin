@@ -18,7 +18,7 @@ class SolrRecord
     :bad_issn_statement,
     :noISSN,
     :no_url,
-    :has_related_records,
+    #:has_related_records,
     :dateStatement,
     :holdings_comparison
 
@@ -36,12 +36,11 @@ class SolrRecord
     <field name=\"sirsiPubDateNotes\">#{pubDateNotes}</field>\
     <field name=\"singleTarget\">#{singleTarget}</field>\
     <field name=\"noISSN\">#{noISSN}</field>\
-    <field name=\"matched\">#{matched?}</field>\
+    <field name=\"matched\">#{matched}</field>\
     <field name=\"bad_dates\">#{bad_dates}</field>\
     <field name=\"bad_issn\">#{bad_issn}</field>\
     <field name=\"bad_issn_statement\">${bad_issn_statement}</field>\
     <field name=\"no_url\">#{no_url}</field>\
-    <field name=\"has_related_records\">#{related_records}</field>\
     <field name=\"holdings_comparison\">#{holdings_comparison}</field>\
     <field name=\"dateStatement\">#{dateStatement}</field>\
     <field name=\"inSFX\">true</field>"

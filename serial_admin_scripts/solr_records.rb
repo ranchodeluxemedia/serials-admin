@@ -5,17 +5,37 @@ require "./solr_record.rb"
 class SolrRecords
 
   def initialize
-    @matched_records = []
-    @bad_dates = {}
+    initialize_data
     read_matched_records
-    @marc_records = []
     read_marc_records
     puts @marc_records.size
-    @solr_records = []
     create_solr_records
-    @bad_issns = {}
     read_bad_issns
     process_additional_data
+  end
+
+public
+
+  def write_solr_xml_file
+    f=File.open("data/solr.xml", "w")
+    f.puts "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+    f.puts "<add>"
+    @solr_records.each do |record|
+      f.puts record.to_xml
+    end
+    f.puts "</add>"
+    f.close
+  end
+
+
+private
+
+  def initialize_data
+    @matched_records = []
+    @bad_dates = {}
+    @marc_records = []
+    @solr_records = []
+    @bad_issns = {}
   end
 
   def read_matched_records
@@ -63,7 +83,6 @@ class SolrRecords
       if @bad_dates[solr_record.issnPrint] then
         solr_record.bad_dates = "true" 
         solr_record.pubDateNotes = @bad_dates[solr_record.issnPrint]
-        puts solr_record.pubDateNotes
       end
 
       if @bad_issns[solr_record.issnPrint] then

@@ -24,12 +24,12 @@ class CatalogController < ApplicationController
     #}
 
     # solr field configuration for search results/index views
-    config.index.show_link = 'titleExact'
+    config.index.show_link = 'ua_title'
     config.index.record_display_type = 'ua_format'
 
     # solr field configuration for document/show views
-    config.show.html_title = 'titleExact'
-    config.show.heading = 'titleExact'
+    config.show.html_title = 'ua_title'
+    config.show.heading = 'ua_title'
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display

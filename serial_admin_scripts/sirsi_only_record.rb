@@ -12,6 +12,6 @@ class SirsiOnlyRecord
   end
 
   def to_xml
-    "<doc><field name=\"id\">#{@catkey}</field><field name=\"ua_issn\">#{@issn}</field><field name=\"ua_catkey\">#{@catkey}</field><field name=\"ua_link_text\">#{@link_text}</field><field name=\"ua_inSirsi\">true</field></doc>".gsub("&", "&amp;") 
+    "<doc><field name=\"id\">#{@catkey}</field><field name=\"ua_issnPrint\">#{@issn}</field><field name=\"ua_catkey\">#{@catkey}</field><field name=\"ua_link_text\">#{@link_text}</field><field name=\"ua_inSirsi\">true</field></doc>".gsub("&", "&amp;") 
   end
 end

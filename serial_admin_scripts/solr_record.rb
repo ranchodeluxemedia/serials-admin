@@ -6,8 +6,6 @@ class SolrRecord
     :issnElectronic,
     :targets,
     :freeJournal,
-    :place,
-    :publisher,
     :language,
     :catkey,
     :pubDateNotes,
@@ -30,8 +28,6 @@ class SolrRecord
     <field name=\"ua_issnPrint\">#{issnPrint}</field>\
     <field name=\"ua_issnElectronic\">#{issnElectronic}</field>\
     <field name=\"ua_freeJournal\">#{freeJournal}</field>\
-    <field name=\"ua_place\">#{place}</field>\
-    <field name=\"ua_publisher\">#{publisher}</field>\
     <field name=\"ua_language\">#{language}</field>\
     <field name=\"ua_catkey\">#{catkey}</field>\
     <field name=\"ua_sirsiPubDateNotes\">#{pubDateNotes}</field>\
@@ -44,7 +40,6 @@ class SolrRecord
     <field name=\"ua_no_url\">#{no_url}</field>\
     <field name=\"ua_holdings_comparison\">#{holdings_comparison}</field>\
     <field name=\"ua_dateStatement\">#{dateStatement}</field>\
-    <field name=\"ua_inSFX\">true</field>"
 
     xml_record+=split_targets
     xml_record+="</doc>"

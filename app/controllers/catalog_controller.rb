@@ -50,13 +50,6 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the 
     # facet bar
-    #config.add_facet_field 'format', :label => 'Format'
-    #config.add_facet_field 'pub_date', :label => 'Publication Year', :single => true
-    #config.add_facet_field 'subject_topic_facet', :label => 'Topic', :limit => 20 
-    #config.add_facet_field 'language_facet', :label => 'Language', :limit => true 
-    #config.add_facet_field 'lc_1letter_facet', :label => 'Call Number' 
-    #config.add_facet_field 'subject_geo_facet', :label => 'Region' 
-    #config.add_facet_field 'subject_era_facet', :label => 'Era'  
 
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
 
@@ -72,7 +65,6 @@ class CatalogController < ApplicationController
     config.add_facet_field 'ua_freeJournal', :label=>'Free'
     config.add_facet_field 'ua_target', :label=>'Targets'
     config.add_facet_field 'ua_sirsiPubDateNotes', :label=>'Sirsi Date Notes'
-    #config.add_facet_field 'ua_inSFX', :label=>'In SFX Only'
     config.add_facet_field 'ua_inSirsi', :label=>'In Sirsi Only'
     config.add_facet_field 'ua_noIssn', :label=>'Title Only (No ISSN)'
 
@@ -82,84 +74,30 @@ class CatalogController < ApplicationController
     # handler defaults, or have no facets.
     config.add_facet_fields_to_solr_request!
 
-    # solr fields to be displayed in the index (search results) view
-    #   The ordering of the field names is the order of the display 
-    #config.add_index_field 'title_display', :label => 'Title:' 
-    #config.add_index_field 'title_vern_display', :label => 'Title:' 
-    #config.add_index_field 'author_display', :label => 'Author:' 
-    #config.add_index_field 'author_vern_display', :label => 'Author:' 
-    #config.add_index_field 'format', :label => 'Format:' 
-    #config.add_index_field 'language_facet', :label => 'Language:'
-    #config.add_index_field 'published_display', :label => 'Published:'
-    #config.add_index_field 'published_vern_display', :label => 'Published:'
-    #config.add_index_field 'lc_callnum_display', :label => 'Call number:'
-    #config.add_index_field 'catkey', :label=>'CatKey: '
     config.add_index_field 'ua_title', :label=>'Title: '
-    config.add_index_field 'ua_id', :label=>'SFX Object ID: '
+    config.add_index_field 'ua_object_id', :label=>'SFX Object ID: '
+    config.add_index_field 'catkey', :label=>'Catkey: '
     config.add_index_field 'ua_issn', :label=>'ISSN: '
 
 
 
     # solr fields to be displayed in the show (single result) view
-    #   The ordering of the field names is the order of the display 
-    #config.add_show_field 'title_display', :label => 'Title:' 
-    #config.add_show_field 'title_vern_display', :label => 'Title:' 
-    #config.add_show_field 'subtitle_display', :label => 'Subtitle:' 
-    #config.add_show_field 'subtitle_vern_display', :label => 'Subtitle:' 
-    #config.add_show_field 'author_display', :label => 'Author:' 
-    #config.add_show_field 'author_vern_display', :label => 'Author:' 
-    #config.add_show_field 'format', :label => 'Format:' 
-    #config.add_show_field 'url_fulltext_display', :label => 'URL:'
-    #config.add_show_field 'url_suppl_display', :label => 'More Information:'
-    #config.add_show_field 'language_facet', :label => 'Language:'
-    #config.add_show_field 'published_display', :label => 'Published:'
-    #config.add_show_field 'published_vern_display', :label => 'Published:'
-    #config.add_show_field 'lc_callnum_display', :label => 'Call number:'
-    #config.add_show_field 'isbn_t', :label => 'ISBN:'
-    config.add_show_field 'id', :label=>'SFX Object ID: '
+    config.add_show_field 'ua_object_id', :label=>'SFX Object ID: '
     config.add_show_field 'ua_catkey', :label=>'Catkey: '
-    #config.add_show_field 'issn', :label=>'ISSN: '
     config.add_show_field 'ua_issnPrint', :label=>'Print ISSN: '
     config.add_show_field 'ua_issnElectronic', :label=>'Electronic ISSN: '
     config.add_show_field 'ua_issnINCORRECT', :label=>'Incorrect ISSN: '
     config.add_show_field 'ua_target', :label=>'Targets: '
-    config.add_show_field 'ua_inSFX', :label=>'In SFX? '
-    config.add_show_field 'ua_inSirsi', :label=>'In Sirsi? '
+    config.add_show_field 'ua_inSirsi', :label=>'In Sirsi Only? '
     config.add_show_field 'ua_singleTarget', :label=>'Single Target? '
-    config.add_show_field 'ua_previousTitle', :label=>'Previous Title: '
-    config.add_show_field 'ua_laterTitle', :label=>'Later Title: '
-
-    # config.add_show_field 'marcFetched', :label=>'MARC Fetched? ' # not sure what this even is
-    # config.add_show_field 'sirsiUrl', :label=>'Sirsi URL: ' # necessary?
-    # config.add_show_field 'sirsiDomain', :label=>'Sirsi Domain: '  # necessary?
-    # this would be easiest to pull from Jeremy's script as the complete date statement
-    #config.add_show_field 'from-year', :label=>'Start Year: '
-    #config.add_show_field 'from-volume', :label=>'Start Volume: '
-    #config.add_show_field 'from-issue', :label=>'Start Issue: '
-    #config.add_show_field 'to-year', :label=>'End Year: '
-    #config.add_show_field 'to-volume', :label=>'End Volume: '
-    #config.add_show_field 'to-issue', :label=>'End Issue: '
-    #config.add_show_field 'embargo-days', :label=>'Embargo: '
-    #config.add_show_field 'sirsiTitleExact', :label=>'SirsiTitle: ' # not sure where to get this data
-    #config.add_show_field 'sirsiHoldings', :label=>'Sirsi Holdings: ' # not sure where to get this data
-    config.add_show_field 'pubDateNotes', :label=>'Notes: '
-    #config.add_show_field 'cat', :label=>'Cat: '
-    #config.add_show_field 'subcat', :label=>'SubCat: '
-    #config.add_show_field 'catText', :label=>'Cat Text: '
-    #config.add_show_field 'subcatText', :label=>'SubCat Text: '
-    #config.add_show_field 'ejdb', :label=>'EJDB: '  # from the e-journals database. Necessary?
-    #config.add_show_field 'peerReviewed', :label=>'Peer Reviewed? ' # from the e-journals database. Necessary?
-    config.add_show_field 'language', :label=>'Language: '
-    #config.add_show_field 'sirsiMatchSource', :label=>'Sirsi Match Source: '
-    #config.add_show_field 'sirsiMatchDate', :label=>'Sirsi Match Date: '
-    config.add_show_field 'ua_status', :label=>'Status: '
+    config.add_show_field 'ua_sirsiPubDateNotes', :label=>'Notes: '
+    config.add_show_field 'ua_link_text', :label=>'Link Text (856z): '
+    config.add_show_field 'ua_language', :label=>'Language: '
     config.add_show_field 'ua_freeJournal', :label=>'Free? '
-    config.add_show_field 'ua_placeExact', :label=>'Place of Publication: '
-    config.add_show_field 'ua_publisherExact', :label=>'Publisher: '
-    # config.add_show_field 'sfxHoldings', :label=>'SFX Holdings: ' Not sure what this is supposed to be. This is actually the dateStatement
     config.add_show_field 'ua_dateStatement', :label=>'Coverage: '
     config.add_show_field 'ua_alternateCatKey', :label=>'Alternate Catkey: '
-    config.add_show_field 'ua_lastUpdated', :label=>'Last Updated: '
+    config.add_show_field 'ua_lastUpdated', :label=>'Last Updated: ' # for incremental updates
+    config.add_show_field 'ua_noIssn', :label=>'Title Only (No ISSN): '
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields

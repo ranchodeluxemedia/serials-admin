@@ -15,4 +15,3 @@ else
   puts "Usage: ruby post.rb <xmlfile>"
 end
 
-

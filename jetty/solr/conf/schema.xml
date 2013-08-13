@@ -596,7 +596,7 @@
   <field name="ua_target" type="string" indexed="true" stored="true" multiValued="true" />
   <field name="ua_title" type="string" indexed="true" stored="true" multiValued="false" />
   <field name="ua_noIssn" type="string" indexed="true" stored="true" multiValued="false"/>
-  <field name="ua_updated" type="boolean" indexed="true" stored="true" multiValued="false"/>
+  <field name="ua_updated" type="string" indexed="true" stored="true" multiValued="false"/>
 
    <!-- uncomment the following to ignore any fields that don't already match an existing 
         field name or dynamic field, rather than reporting them as an error. 

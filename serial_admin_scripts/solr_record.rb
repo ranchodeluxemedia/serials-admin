@@ -21,7 +21,7 @@ class SolrRecord
     :holdings_comparison
 
   def to_xml
-
+ 
     xml_record = "<doc><field name=\"id\">#{object_id}</field>\
     <field name=\"ua_object_id\">#{object_id}</field>\
     <field name=\"ua_title\">#{title}</field>\
@@ -32,14 +32,14 @@ class SolrRecord
     <field name=\"ua_catkey\">#{catkey}</field>\
     <field name=\"ua_sirsiPubDateNotes\">#{pubDateNotes}</field>\
     <field name=\"ua_singleTarget\">#{singleTarget}</field>\
-    <field name=\"ua_noISSN\">#{noISSN}</field>\
+    <field name=\"ua_noISSN\">#{noISSN?}</field>\
     <field name=\"ua_updated\">#{updated}</field>\
     <field name=\"ua_bad_dates\">#{bad_dates}</field>\
     <field name=\"ua_bad_issn\">#{bad_issn}</field>\
     <field name=\"ua_bad_issn_statement\">#{bad_issn_statement}</field>\
     <field name=\"ua_no_url\">#{no_url}</field>\
     <field name=\"ua_holdings_comparison\">#{holdings_comparison}</field>\
-    <field name=\"ua_dateStatement\">#{dateStatement}</field>\
+    <field name=\"ua_dateStatement\">#{dateStatement}</field>"
 
     xml_record+=split_targets
     xml_record+="</doc>"
@@ -59,7 +59,7 @@ class SolrRecord
   end
 
   def noISSN?
-    @issnPrint!="" || @issnElectronic!=""
+    @issnPrint.nil? && @issnElectronic.nil?
   end
 
 end

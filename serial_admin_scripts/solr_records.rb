@@ -44,16 +44,14 @@ private
       issn = line.split("|")[2]
       statement = line.split("|").last
       @matched_records << issn if statement.include? "Pub Dates ok"
-      @bad_dates[issn] = statement if statement.include? "Bad Pub dates"
+      @bad_dates[issn] = statement if statement.include? "Not updated"
     end
   end
 
   def read_marc_records
     reader = MARC::XMLReader.new("data/sfxdata.xml")
     for record in reader
-      if record['022']
         @marc_records << record
-      end
     end
   end
 
@@ -67,15 +65,15 @@ private
       solr_record.targets=parse_targets(marc_record)
       solr_record.singleTarget = single_target?(solr_record)
       solr_record.freeJournal="temp"  # still working on the logic of this
-      solr_record.place=marc_record['260']['a'] if marc_record['260']
-      solr_record.publisher=marc_record['260']['b'] if marc_record['260']
       solr_record.language=language(marc_record)
       solr_record.pubDateNotes="temp" #from matchissn
       solr_record.dateStatement="temp" #from Jeremy's script
-      if @matched_records.include? marc_record['022']['a']
-        solr_record.updated="true"
+      if marc_record['022'] && @matched_records.include?(marc_record['022']['a'])
+        solr_record.updated="updated by sfx2sirsi"
+      elsif marc_record['022'] && @bad_dates.include?(marc_record['022']['a'])
+	solr_record.updated="processed by sfx2sirsi but not updated"
       else
-	solr_record.updated="false"
+        solr_record.updated="not processed by sfx2sirsi / not updated"
       end
       solr_record.bad_dates = "false"
       solr_record.bad_issn = "false"

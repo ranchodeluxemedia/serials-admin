@@ -25,7 +25,6 @@ class CatalogController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.show_link = 'ua_title'
-    config.index.record_display_type = 'ua_format'
 
     # solr field configuration for document/show views
     config.show.html_title = 'ua_title'
@@ -77,7 +76,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'ua_title', :label=>'Title: '
     config.add_index_field 'ua_object_id', :label=>'SFX Object ID: '
     config.add_index_field 'catkey', :label=>'Catkey: '
-    config.add_index_field 'ua_issn', :label=>'ISSN: '
+    config.add_index_field 'ua_issnPrint', :label=>'ISSN: '
 
 
 
@@ -90,6 +89,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'ua_target', :label=>'Targets: '
     config.add_show_field 'ua_inSirsi', :label=>'In Sirsi Only? '
     config.add_show_field 'ua_singleTarget', :label=>'Single Target? '
+    config.add_show_field 'ua_updated', :label=>'Updated? '
     config.add_show_field 'ua_sirsiPubDateNotes', :label=>'Notes: '
     config.add_show_field 'ua_link_text', :label=>'Link Text (856z): '
     config.add_show_field 'ua_language', :label=>'Language: '

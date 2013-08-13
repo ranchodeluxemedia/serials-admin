@@ -71,8 +71,9 @@ class CatalogController < ApplicationController
     config.add_facet_field 'ua_freeJournal', :label=>'Free'
     config.add_facet_field 'ua_target', :label=>'Targets'
     config.add_facet_field 'ua_sirsiPubDateNotes', :label=>'Sirsi Date Notes'
-    config.add_facet_field 'ua_inSFX', :label=>'In SFX Only'
+    #config.add_facet_field 'ua_inSFX', :label=>'In SFX Only'
     config.add_facet_field 'ua_inSirsi', :label=>'In Sirsi Only'
+    config.add_facet_field 'ua_noIssn', :label=>'Title Only (No ISSN)'
 
 
     # Have BL send all facet field names to Solr, which has been the default

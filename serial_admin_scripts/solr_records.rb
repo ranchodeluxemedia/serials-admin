@@ -45,6 +45,7 @@ private
       statement = line.split("|").last
       @matched_records << issn if statement.include? "Pub Dates ok"
       @bad_dates[issn] = statement if statement.include? "Bad Pub dates"
+      puts statement
     end
   end
 
@@ -52,7 +53,7 @@ private
     reader = MARC::XMLReader.new("data/sfxdata.xml")
     for record in reader
       if record['022']
-        @marc_records << record unless @matched_records.include? record['022']['a']
+        @marc_records << record
       end
     end
   end
@@ -72,6 +73,11 @@ private
       solr_record.language=language(marc_record)
       solr_record.pubDateNotes="temp" #from matchissn
       solr_record.dateStatement="temp" #from Jeremy's script
+      if @matched_records.include? marc_record['022']['a']
+        solr_record.updated="true"
+      else
+	solr_record.updated="false"
+      end
       solr_record.bad_dates = "false"
       solr_record.bad_issn = "false"
       @solr_records << solr_record

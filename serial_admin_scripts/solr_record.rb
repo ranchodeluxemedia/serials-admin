@@ -12,7 +12,7 @@ class SolrRecord
     :catkey,
     :pubDateNotes,
     :singleTarget,
-    :matched,
+    :updated,
     :bad_dates,
     :bad_issn,
     :bad_issn_statement,
@@ -36,10 +36,10 @@ class SolrRecord
     <field name=\"ua_sirsiPubDateNotes\">#{pubDateNotes}</field>\
     <field name=\"ua_singleTarget\">#{singleTarget}</field>\
     <field name=\"ua_noISSN\">#{noISSN}</field>\
-    <field name=\"ua_matched\">#{matched}</field>\
+    <field name=\"ua_updated\">#{updated}</field>\
     <field name=\"ua_bad_dates\">#{bad_dates}</field>\
     <field name=\"ua_bad_issn\">#{bad_issn}</field>\
-    <field name=\"ua_bad_issn_statement\">${bad_issn_statement}</field>\
+    <field name=\"ua_bad_issn_statement\">#{bad_issn_statement}</field>\
     <field name=\"ua_no_url\">#{no_url}</field>\
     <field name=\"ua_holdings_comparison\">#{holdings_comparison}</field>\
     <field name=\"ua_dateStatement\">#{dateStatement}</field>\

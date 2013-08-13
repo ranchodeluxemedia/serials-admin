@@ -66,6 +66,7 @@ class CatalogController < ApplicationController
      #  :years_25 => { :label => 'within 25 Years', :fq => "pub_date:[#{Time.now.year - 25 } TO *]" }
     #}
 
+    config.add_facet_field 'ua_updated', :label=>'Successful Match'
     config.add_facet_field 'ua_singleTarget', :label=>'Single Target'
     config.add_facet_field 'ua_language', :label=>'Language'
     config.add_facet_field 'ua_freeJournal', :label=>'Free'

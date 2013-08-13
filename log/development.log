@@ -2547,3 +2547,845 @@ Processing by CatalogController#show as HTML
   Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
   Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
 Completed 200 OK in 84ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 12:42:40 -0600
+Connecting to database specified by database.yml
+Processing by CatalogController#index as HTML
+Solr query: {:qt=>"search", "spellcheck.q"=>nil, :"facet.field"=>["ua_updated", "ua_singleTarget", "ua_language", "ua_freeJournal", "ua_target", "ua_sirsiPubDateNotes", "ua_inSirsi", "ua_noIssn"], :sort=>"score desc, pub_date_sort desc, title_sort asc", "start"=>0, "rows"=>10}
+Solr fetch: CatalogController#query_solr (100.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (54.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (27.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (92.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_home_text.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (15.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_home.html.erb (17.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/index.html.erb within layouts/blacklight (113.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (3.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 366ms (Views: 206.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:42:40 -0600
+Served asset /blacklight.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:42:41 -0600
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:42:41 -0600
+Served asset /application.js - 304 Not Modified (35ms)
+
+
+Started GET "/?f%5Bua_singleTarget%5D%5B%5D=true" for 127.0.0.1 at 2013-08-13 12:42:53 -0600
+Processing by CatalogController#index as HTML
+  Parameters: {"f"=>{"ua_singleTarget"=>["true"]}}
+Solr query: {:qt=>"search", "spellcheck.q"=>nil, :fq=>["ua_singleTarget:true"], :"facet.field"=>["ua_updated", "ua_singleTarget", "ua_language", "ua_freeJournal", "ua_target", "ua_sirsiPubDateNotes", "ua_inSirsi", "ua_noIssn"], :sort=>"score desc, pub_date_sort desc, title_sort asc", "start"=>0, "rows"=>10}
+Solr fetch: CatalogController#query_solr (34.3ms)
+  [1m[36mSearch Load (0.1ms)[0m  [1mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (4, 3, 2) ORDER BY updated_at desc[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.8ms)[0m  [1mINSERT INTO "searches" ("created_at", "query_params", "updated_at", "user_id", "user_type") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 13 Aug 2013 18:42:53 UTC +00:00], ["query_params", "---\n:f: !ruby/hash:ActiveSupport::HashWithIndifferentAccess\n  ua_singleTarget:\n  - 'true'\n:controller: catalog\n:action: index\n"], ["updated_at", Tue, 13 Aug 2013 18:42:53 UTC +00:00], ["user_id", nil], ["user_type", nil]]
+  [1m[35m (137.8ms)[0m  commit transaction
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (2.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (4.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (22.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_opensearch_response_metadata.html.erb (0.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_did_you_mean.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_constraints_element.html.erb (0.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_constraints.html.erb (2.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_paginate_compact.html.erb (4.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_sort_widget.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_per_page_widget.html.erb (1.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_sort_and_per_page.html.erb (9.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document.html.erb (41.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_list.html.erb (42.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_results_pagination.html.erb (11.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/index.html.erb within layouts/blacklight (92.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (22.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 347ms (Views: 162.6ms | ActiveRecord: 141.6ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:42:54 -0600
+Served asset /blacklight.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:42:54 -0600
+Served asset /application.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:42:54 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/catalog/954921333010" for 127.0.0.1 at 2013-08-13 12:42:55 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"1", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921333010"}
+Redirected to http://localhost:3000/catalog/954921333010
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921333010" for 127.0.0.1 at 2013-08-13 12:42:55 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921333010"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (1.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (2.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (12.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 81ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:42:55 -0600
+Served asset /blacklight.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:42:55 -0600
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:42:55 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/catalog/954921335039" for 127.0.0.1 at 2013-08-13 12:43:01 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"2", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921335039"}
+Redirected to http://localhost:3000/catalog/954921335039
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921335039" for 127.0.0.1 at 2013-08-13 12:43:01 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921335039"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (36.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 106ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:01 -0600
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:01 -0600
+Served asset /blacklight.css - 304 Not Modified (43ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:01 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/catalog/954921335053" for 127.0.0.1 at 2013-08-13 12:43:02 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"3", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921335053"}
+Redirected to http://localhost:3000/catalog/954921335053
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921335053" for 127.0.0.1 at 2013-08-13 12:43:02 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921335053"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (9.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 84ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:02 -0600
+Served asset /blacklight.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:02 -0600
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:02 -0600
+Served asset /application.js - 304 Not Modified (45ms)
+
+
+Started PUT "/catalog/954921336057" for 127.0.0.1 at 2013-08-13 12:43:03 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"4", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921336057"}
+Redirected to http://localhost:3000/catalog/954921336057
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921336057" for 127.0.0.1 at 2013-08-13 12:43:03 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921336057"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (10.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 80ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:03 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:03 -0600
+Served asset /blacklight.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:03 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/catalog/954921339105" for 127.0.0.1 at 2013-08-13 12:43:03 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"5", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921339105"}
+Redirected to http://localhost:3000/catalog/954921339105
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921339105" for 127.0.0.1 at 2013-08-13 12:43:03 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921339105"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (1.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (10.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:03 -0600
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:03 -0600
+Served asset /blacklight.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:04 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 12:43:09 -0600
+Processing by CatalogController#index as HTML
+Solr query: {:qt=>"search", "spellcheck.q"=>nil, :"facet.field"=>["ua_updated", "ua_singleTarget", "ua_language", "ua_freeJournal", "ua_target", "ua_sirsiPubDateNotes", "ua_inSirsi", "ua_noIssn"], :sort=>"score desc, pub_date_sort desc, title_sort asc", "start"=>0, "rows"=>10}
+Solr fetch: CatalogController#query_solr (7.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (4.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (17.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_home_text.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (2.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (15.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_home.html.erb (17.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/index.html.erb within layouts/blacklight (35.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:09 -0600
+Served asset /application.css - 304 Not Modified (38ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:09 -0600
+Served asset /blacklight.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:09 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/?f%5Bua_singleTarget%5D%5B%5D=false" for 127.0.0.1 at 2013-08-13 12:43:11 -0600
+Processing by CatalogController#index as HTML
+  Parameters: {"f"=>{"ua_singleTarget"=>["false"]}}
+Solr query: {:qt=>"search", "spellcheck.q"=>nil, :fq=>["ua_singleTarget:false"], :"facet.field"=>["ua_updated", "ua_singleTarget", "ua_language", "ua_freeJournal", "ua_target", "ua_sirsiPubDateNotes", "ua_inSirsi", "ua_noIssn"], :sort=>"score desc, pub_date_sort desc, title_sort asc", "start"=>0, "rows"=>10}
+Solr fetch: CatalogController#query_solr (12.8ms)
+  [1m[36mSearch Load (0.2ms)[0m  [1mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (5, 4, 3, 2) ORDER BY updated_at desc[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "query_params", "updated_at", "user_id", "user_type") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 13 Aug 2013 18:43:11 UTC +00:00], ["query_params", "---\n:f: !ruby/hash:ActiveSupport::HashWithIndifferentAccess\n  ua_singleTarget:\n  - 'false'\n:controller: catalog\n:action: index\n"], ["updated_at", Tue, 13 Aug 2013 18:43:11 UTC +00:00], ["user_id", nil], ["user_type", nil]]
+  [1m[35m (147.7ms)[0m  commit transaction
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (4.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (4.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (4.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (44.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_opensearch_response_metadata.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_did_you_mean.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_constraints_element.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_constraints.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_paginate_compact.html.erb (3.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_sort_widget.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_per_page_widget.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_sort_and_per_page.html.erb (6.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document.html.erb (37.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_list.html.erb (37.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_results_pagination.html.erb (8.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/index.html.erb within layouts/blacklight (105.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 320ms (Views: 153.8ms | ActiveRecord: 148.1ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:11 -0600
+Served asset /blacklight.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:12 -0600
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:12 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/catalog/954921332001" for 127.0.0.1 at 2013-08-13 12:43:13 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"1", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921332001"}
+Redirected to http://localhost:3000/catalog/954921332001
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921332001" for 127.0.0.1 at 2013-08-13 12:43:13 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921332001"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (2.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (3.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (13.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 92ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:13 -0600
+Served asset /blacklight.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:13 -0600
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:13 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/catalog/954921332003" for 127.0.0.1 at 2013-08-13 12:43:16 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"2", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921332003"}
+Redirected to http://localhost:3000/catalog/954921332003
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921332003" for 127.0.0.1 at 2013-08-13 12:43:16 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921332003"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (2.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (14.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 77ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:16 -0600
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:16 -0600
+Served asset /blacklight.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:16 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/catalog/954921332004" for 127.0.0.1 at 2013-08-13 12:43:17 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"3", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921332004"}
+Redirected to http://localhost:3000/catalog/954921332004
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921332004" for 127.0.0.1 at 2013-08-13 12:43:17 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921332004"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (9.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:17 -0600
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:17 -0600
+Served asset /blacklight.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:17 -0600
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started PUT "/catalog/954921333005" for 127.0.0.1 at 2013-08-13 12:43:17 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"4", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921333005"}
+Redirected to http://localhost:3000/catalog/954921333005
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921333005" for 127.0.0.1 at 2013-08-13 12:43:17 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921333005"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (10.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 75ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:17 -0600
+Served asset /application.css - 304 Not Modified (49ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:17 -0600
+Served asset /blacklight.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:17 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started PUT "/catalog/954921333007" for 127.0.0.1 at 2013-08-13 12:43:18 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"5", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921333007"}
+Redirected to http://localhost:3000/catalog/954921333007
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921333007" for 127.0.0.1 at 2013-08-13 12:43:18 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921333007"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (9.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 100ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:18 -0600
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:18 -0600
+Served asset /blacklight.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:18 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/catalog/954921333008" for 127.0.0.1 at 2013-08-13 12:43:18 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"6", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921333008"}
+Redirected to http://localhost:3000/catalog/954921333008
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921333008" for 127.0.0.1 at 2013-08-13 12:43:18 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921333008"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (4.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (13.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 79ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:19 -0600
+Served asset /blacklight.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:19 -0600
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:19 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/?f%5Bua_singleTarget%5D%5B%5D=false&f%5Bua_sirsiPubDateNotes%5D%5B%5D=temp" for 127.0.0.1 at 2013-08-13 12:43:46 -0600
+Processing by CatalogController#index as HTML
+  Parameters: {"f"=>{"ua_singleTarget"=>["false"], "ua_sirsiPubDateNotes"=>["temp"]}}
+Solr query: {:qt=>"search", "spellcheck.q"=>nil, :fq=>["ua_singleTarget:false", "{!raw f=ua_sirsiPubDateNotes}temp"], :"facet.field"=>["ua_updated", "ua_singleTarget", "ua_language", "ua_freeJournal", "ua_target", "ua_sirsiPubDateNotes", "ua_inSirsi", "ua_noIssn"], :sort=>"score desc, pub_date_sort desc, title_sort asc", "start"=>0, "rows"=>10}
+Solr fetch: CatalogController#query_solr (11.6ms)
+  [1m[36mSearch Load (0.2ms)[0m  [1mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (6, 5, 4, 3, 2) ORDER BY updated_at desc[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "searches" ("created_at", "query_params", "updated_at", "user_id", "user_type") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 13 Aug 2013 18:43:46 UTC +00:00], ["query_params", "---\n:f: !ruby/hash:ActiveSupport::HashWithIndifferentAccess\n  ua_singleTarget:\n  - 'false'\n  ua_sirsiPubDateNotes:\n  - temp\n:controller: catalog\n:action: index\n"], ["updated_at", Tue, 13 Aug 2013 18:43:46 UTC +00:00], ["user_id", nil], ["user_type", nil]]
+  [1m[35m (145.0ms)[0m  commit transaction
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (2.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (4.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (4.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (2.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (20.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_opensearch_response_metadata.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_did_you_mean.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_constraints_element.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_constraints_element.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_constraints.html.erb (2.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_paginate_compact.html.erb (3.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_sort_widget.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_per_page_widget.html.erb (1.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_sort_and_per_page.html.erb (7.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document.html.erb (38.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_list.html.erb (39.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_results_pagination.html.erb (9.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/index.html.erb within layouts/blacklight (110.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 321ms (Views: 158.8ms | ActiveRecord: 145.4ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:46 -0600
+Served asset /blacklight.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:46 -0600
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:47 -0600
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started PUT "/catalog/954921332001" for 127.0.0.1 at 2013-08-13 12:43:48 -0600
+Processing by CatalogController#update as HTML
+  Parameters: {"counter"=>"1", "authenticity_token"=>"oKx/hWJ+9VfzwfwUlM8lVeMHEdB8DwPIq+EjwqTu+N4=", "id"=>"954921332001"}
+Redirected to http://localhost:3000/catalog/954921332001
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog/954921332001" for 127.0.0.1 at 2013-08-13 12:43:48 -0600
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"954921332001"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_previous_next_doc.html.erb (2.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (0.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_default.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_tools.html.erb (3.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_show_sidebar.html.erb (4.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/show.html.erb within layouts/blacklight (14.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 67ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:48 -0600
+Served asset /blacklight.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:48 -0600
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:48 -0600
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/?f%5Bua_singleTarget%5D%5B%5D=false" for 127.0.0.1 at 2013-08-13 12:43:53 -0600
+Processing by CatalogController#index as HTML
+  Parameters: {"f"=>{"ua_singleTarget"=>["false"]}}
+Solr query: {:qt=>"search", "spellcheck.q"=>nil, :fq=>["ua_singleTarget:false"], :"facet.field"=>["ua_updated", "ua_singleTarget", "ua_language", "ua_freeJournal", "ua_target", "ua_sirsiPubDateNotes", "ua_inSirsi", "ua_noIssn"], :sort=>"score desc, pub_date_sort desc, title_sort asc", "start"=>0, "rows"=>10}
+Solr fetch: CatalogController#query_solr (6.5ms)
+  [1m[36mSearch Load (0.2ms)[0m  [1mSELECT "searches".* FROM "searches" WHERE "searches"."id" IN (7, 6, 5, 4, 3, 2) ORDER BY updated_at desc[0m
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (5.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (18.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_opensearch_response_metadata.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_did_you_mean.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_constraints_element.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_constraints.html.erb (2.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_paginate_compact.html.erb (3.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_sort_widget.html.erb (1.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_per_page_widget.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_sort_and_per_page.html.erb (7.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_header.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_index_default.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document.html.erb (38.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_document_list.html.erb (38.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_results_pagination.html.erb (8.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/index.html.erb within layouts/blacklight (80.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 138ms (Views: 128.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:53 -0600
+Served asset /blacklight.css - 304 Not Modified (40ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:43:53 -0600
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:43:53 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-13 12:45:07 -0600
+Processing by CatalogController#index as HTML
+Solr query: {:qt=>"search", "spellcheck.q"=>nil, :"facet.field"=>["ua_updated", "ua_singleTarget", "ua_language", "ua_freeJournal", "ua_target", "ua_sirsiPubDateNotes", "ua_inSirsi", "ua_noIssn"], :sort=>"score desc, pub_date_sort desc, title_sort asc", "start"=>0, "rows"=>10}
+Solr fetch: CatalogController#query_solr (127.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (5.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (21.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_home_text.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (28.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (5.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (4.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (48.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_home.html.erb (49.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/index.html.erb within layouts/blacklight (71.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 246ms (Views: 117.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 12:45:07 -0600
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-13 12:45:07 -0600
+Served asset /blacklight.css - 304 Not Modified (34ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 12:45:07 -0600
+Served asset /application.js - 304 Not Modified (1ms)

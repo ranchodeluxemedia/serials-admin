@@ -25,6 +25,7 @@ class SolrRecord
   def to_xml
 
     xml_record = "<doc><field name=\"id\">#{object_id}</field>\
+    <field name=\"ua_object_id\">#{object_id}</field>\
     <field name=\"ua_title\">#{title}</field>\
     <field name=\"ua_issnPrint\">#{issnPrint}</field>\
     <field name=\"ua_issnElectronic\">#{issnElectronic}</field>\

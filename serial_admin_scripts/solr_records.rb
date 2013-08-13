@@ -45,7 +45,6 @@ private
       statement = line.split("|").last
       @matched_records << issn if statement.include? "Pub Dates ok"
       @bad_dates[issn] = statement if statement.include? "Bad Pub dates"
-      puts statement
     end
   end
 

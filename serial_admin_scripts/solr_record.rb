@@ -47,6 +47,7 @@ class SolrRecord
 
     xml_record+=split_targets
     xml_record+="</doc>"
+    xml_record.gsub("<<", "").gsub(">>", "")
 
   end
 

@@ -24649,3 +24649,267 @@ Served asset /application.js - 304 Not Modified (1ms)
 
 Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-14 15:40:59 -0600
 Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-14 15:44:23 -0600
+Connecting to database specified by database.yml
+Processing by CatalogController#index as HTML
+Solr query: {:qt=>"search", "spellcheck.q"=>nil, :"facet.field"=>["ua_updated", "ua_singleTarget", "ua_language", "ua_freeJournal", "ua_target", "ua_sirsiPubDateNotes", "ua_inSirsi", "ua_noIssn"], :"f.ua_target.facet.limit"=>21, :sort=>"score desc, pub_date_sort desc, title_sort asc", "start"=>0, "rows"=>10}
+Solr fetch: CatalogController#query_solr (225.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (55.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (23.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (6.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (2.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (97.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_home_text.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.5ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (6.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (2.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (21.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_home.html.erb (23.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/index.html.erb within layouts/blacklight (124.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (1.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (3.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 537ms (Views: 261.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /application.css - 304 Not Modified (56ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blacklight/core.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/core.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blacklight/checkbox_submit.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/checkbox_submit.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /jquery.js - 304 Not Modified (52ms)
+
+
+Started GET "/assets/blacklight/bookmark_toggle.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/bookmark_toggle.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/blacklight/select_submit.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/select_submit.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/blacklight/lightbox_dialog.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/lightbox_dialog.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/blacklight/facet_expand_contract.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/facet_expand_contract.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/blacklight/search_context.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/search_context.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/blacklight/zebra_stripe.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/zebra_stripe.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/blacklight/css_dropdowns.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/css_dropdowns.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/blacklight/blacklight.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/blacklight.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/improved-modal/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /improved-modal/bootstrap-modal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/improved-modal/bootstrap-modalmanager.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /improved-modal/bootstrap-modalmanager.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /application.js - 304 Not Modified (48ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blacklight/logo.png" for 127.0.0.1 at 2013-08-14 15:44:24 -0600
+Served asset /blacklight/logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Processing by CatalogController#index as HTML
+Solr query: {:qt=>"search", "spellcheck.q"=>nil, :"facet.field"=>["ua_updated", "ua_singleTarget", "ua_language", "ua_freeJournal", "ua_target", "ua_sirsiPubDateNotes", "ua_inSirsi", "ua_noIssn"], :"f.ua_target.facet.limit"=>11, :sort=>"score desc, pub_date_sort desc, title_sort asc", "start"=>0, "rows"=>10}
+Solr fetch: CatalogController#query_solr (22.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (4.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (2.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (23.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_home_text.html.erb (0.1ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.4ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (1.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (3.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (2.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (0.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_limit.html.erb (28.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facets.html.erb (48.7ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_home.html.erb (49.9ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/index.html.erb within layouts/blacklight (74.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_search_form.html.erb (0.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_user_util_links.html.erb (0.2ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_header_navbar.html.erb (2.3ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/_flash_msg.html.erb (0.0ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 145ms (Views: 117.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blacklight.css?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blacklight/core.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight/core.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blacklight/checkbox_submit.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight/checkbox_submit.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /application.css - 304 Not Modified (52ms)
+
+
+Started GET "/assets/blacklight/select_submit.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight/select_submit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blacklight/lightbox_dialog.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight/lightbox_dialog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blacklight/search_context.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight/search_context.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blacklight/bookmark_toggle.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight/bookmark_toggle.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blacklight/facet_expand_contract.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight/facet_expand_contract.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blacklight/css_dropdowns.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight/css_dropdowns.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/blacklight/zebra_stripe.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight/zebra_stripe.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/improved-modal/bootstrap-modalmanager.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /improved-modal/bootstrap-modalmanager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/improved-modal/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /improved-modal/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blacklight/blacklight.js?body=1" for 127.0.0.1 at 2013-08-14 15:44:51 -0600
+Served asset /blacklight/blacklight.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2013-08-14 15:44:52 -0600
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings-white.png" for 127.0.0.1 at 2013-08-14 15:44:52 -0600
+Served asset /glyphicons-halflings-white.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blacklight/logo.png" for 127.0.0.1 at 2013-08-14 15:44:52 -0600
+Served asset /blacklight/logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-08-14 15:44:52 -0600
+Served asset /favicon.ico - 304 Not Modified (1ms)
+
+
+Started GET "/catalog/facet/ua_target?_=1376516691968" for 127.0.0.1 at 2013-08-14 15:44:55 -0600
+Processing by CatalogController#facet as JS
+  Parameters: {"_"=>"1376516691968", "id"=>"ua_target"}
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_pagination.html.erb (26.8ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/_facet_pagination.html.erb (0.6ms)
+  Rendered /home/asdp/.rvm/gems/ruby-2.0.0-p0/gems/blacklight-4.0.1/app/views/catalog/facet.html.erb (36.6ms)
+Completed 200 OK in 53ms (Views: 43.1ms | ActiveRecord: 0.0ms)

@@ -62,7 +62,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'ua_singleTarget', :label=>'Single Target'
     config.add_facet_field 'ua_language', :label=>'Language'
     config.add_facet_field 'ua_freeJournal', :label=>'Free'
-    config.add_facet_field 'ua_target', :label=>'Targets'
+    config.add_facet_field 'ua_target', :label=>'Targets', :limit => 10
     config.add_facet_field 'ua_sirsiPubDateNotes', :label=>'Sirsi Date Notes'
     config.add_facet_field 'ua_inSirsi', :label=>'In Sirsi Only'
     config.add_facet_field 'ua_noIssn', :label=>'Title Only (No ISSN)'

@@ -36,6 +36,7 @@ private
     @marc_records = []
     @solr_records = []
     @bad_issns = {}
+    @catkeys = {}
   end
 
   def read_matched_records
@@ -43,6 +44,7 @@ private
       catkey = line.split("|").first
       issn = line.split("|")[2]
       statement = line.split("|").last
+      @catkeys[issn] = catkey
       @matched_records << issn if statement.include? "Pub Dates ok"
       @bad_dates[issn] = statement if statement.include? "Not updated"
     end
@@ -67,6 +69,7 @@ private
       solr_record.freeJournal="temp"  # still working on the logic of this
       solr_record.language=language(marc_record)
       solr_record.pubDateNotes="temp" #from matchissn
+      solr_record.catkey=@catkeys[solr_record.issnPrint]
       solr_record.dateStatement="temp" #from Jeremy's script
       if marc_record['022'] && @matched_records.include?(marc_record['022']['a'])
         solr_record.updated="updated by sfx2sirsi"

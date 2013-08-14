@@ -594,7 +594,6 @@
 
   <field name="identifiers" type="text" indexed="true" stored="false" multiValued="true"/>
   <field name="ua_target" type="string" indexed="true" stored="true" multiValued="true" />
-  <field name="ua_title" type="string" indexed="true" stored="true" multiValued="false" />
   <field name="ua_noIssn" type="string" indexed="true" stored="true" multiValued="false"/>
   <field name="ua_updated" type="string" indexed="true" stored="true" multiValued="false"/>
 

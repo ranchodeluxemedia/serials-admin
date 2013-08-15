@@ -2,4 +2,3 @@ tmp/
 serial_admin_scripts/data
 serials_admin_scripts/data/sfxdata.xml
 log/
-db/

@@ -66,11 +66,11 @@ private
       solr_record.issnElectronic=marc_record['776']['x'] if marc_record['776']
       solr_record.targets=parse_targets(marc_record)
       solr_record.singleTarget = single_target?(solr_record)
-      solr_record.freeJournal="temp"  # still working on the logic of this
+      #solr_record.freeJournal="temp"  # still working on the logic of this
       solr_record.language=language(marc_record)
       solr_record.pubDateNotes="temp" #from matchissn
-      solr_record.catkey=@catkeys[solr_record.issnPrint]
-      solr_record.dateStatement="temp" #from Jeremy's script
+      solr_record.catkey=@catkeys[solr_record.issnPrint] if solr_record.issnPrint
+      #solr_record.dateStatement="temp" #from Jeremy's script
       if marc_record['022'] && @matched_records.include?(marc_record['022']['a'])
         solr_record.updated="updated by sfx2sirsi"
       elsif marc_record['022'] && @bad_dates.include?(marc_record['022']['a'])

@@ -28,9 +28,9 @@ mode = ARGV[1] ||= :full
 # break these into rake tasks
 solr_records = SolrRecords.new
 solr_records.write_solr_xml_file
-sirsi_records = SirsiRecords.new("data/notSFX.txt")
-sirsi_records.write_xml_file
-process_noissn_records
+#sirsi_records = SirsiRecords.new("data/notSFX.txt")
+#sirsi_records.write_xml_file
+#process_noissn_records
 
 
   

@@ -30,7 +30,6 @@ class SolrRecord
     <field name=\"ua_freeJournal\">#{freeJournal}</field>\
     <field name=\"ua_language\">#{language}</field>\
     <field name=\"ua_catkey\">#{catkey}</field>\
-    <field name=\"ua_sirsiPubDateNotes\">#{pubDateNotes}</field>\
     <field name=\"ua_singleTarget\">#{singleTarget}</field>\
     <field name=\"ua_noISSN\">#{noISSN?}</field>\
     <field name=\"ua_updated\">#{updated}</field>\
@@ -42,6 +41,7 @@ class SolrRecord
     <field name=\"ua_dateStatement\">#{dateStatement}</field>"
 
     xml_record+=split_targets
+    xml_record+=pubDateNotes?
     xml_record+="</doc>"
     xml_record.gsub("<<", "").gsub(">>", "")
 
@@ -60,6 +60,14 @@ class SolrRecord
 
   def noISSN?
     @issnPrint.nil? && @issnElectronic.nil?
+  end
+
+  def pubDateNotes?
+    if pubDateNotes=="temp"
+      ""
+    else
+      "<field name=\"ua_sirsiPubDateNotes\">#{pubDateNotes}</field>" unless pubDateNotes=="temp"
+    end
   end
 
 end

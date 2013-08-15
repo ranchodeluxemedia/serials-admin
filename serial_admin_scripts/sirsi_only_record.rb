@@ -1,5 +1,3 @@
-require 'rexml/document'
-
 class SirsiOnlyRecord
   # for journal records that are in Sirsi but not in SFX
  

@@ -29,6 +29,7 @@ mode = ARGV[1] ||= :full
 solr_records = SolrRecords.new
 solr_records.write_solr_xml_file
 sirsi_records = SirsiOnlyRecords.new("data/notSFX.txt")
+sirsi_records.write_xml_file
 process_noissn_records
 
 

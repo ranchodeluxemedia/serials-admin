@@ -1,14 +1,14 @@
-require_relative "../../sirsi_only_record.rb"
+require_relative "../../sirsi_record.rb"
 
-describe "Sirsi Only Record" do
+describe "Sirsi Record" do
 
   before :each do
     options = {:issn=>"0001-0001", :catkey=>"55555", :link_text=>"University of Alberta Access"}
-    @sirsi_record = SirsiOnlyRecord.new options
+    @sirsi_record = SirsiRecord.new options
   end
 
-  it "should be an instance of SirsiOnlyRecord" do
-    @sirsi_record.should be_an_instance_of SirsiOnlyRecord
+  it "should be an instance of SirsiRecord" do
+    @sirsi_record.should be_an_instance_of SirsiRecord
   end
 
   it "should have an xml representation" do

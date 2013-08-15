@@ -1,4 +1,4 @@
-class SirsiOnlyRecord
+class SirsiRecord
   # for journal records that are in Sirsi but not in SFX
  
   attr_accessor :issn, :catkey, :link_text

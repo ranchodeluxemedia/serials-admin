@@ -159,12 +159,12 @@ class CatalogController < ApplicationController
       }  
     end
 
-    #config.add_search_field('title') do |field|
-    #  field.solr_local_parameters = {
-    #   :qf => '$title_qf',
-    #   :pf => '$title_pf'
-    #  }
-    #end
+    config.add_search_field('title') do |field|
+      field.solr_local_parameters = {
+       :qf => '$title_qf',
+       :pf => '$title_pf'
+      }
+    end
 
 
     

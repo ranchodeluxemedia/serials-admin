@@ -9,6 +9,7 @@ class SolrRecords
     read_matched_records
     read_marc_records
     puts @marc_records.size
+    read_summary_holdings
     create_solr_records
     read_bad_issns
     process_additional_data
@@ -37,6 +38,7 @@ private
     @solr_records = []
     @bad_issns = {}
     @catkeys = {}
+    @summary_holdings = {}
   end
 
   def read_matched_records
@@ -66,11 +68,15 @@ private
       solr_record.issnElectronic=marc_record['776']['x'] if marc_record['776']
       solr_record.targets=parse_targets(marc_record)
       solr_record.singleTarget = single_target?(solr_record)
-      #solr_record.freeJournal="temp"  # still working on the logic of this
+      if @summary_holdings[solr_record.object_id.to_s]
+        solr_record.freeJournal=@summary_holdings[solr_record.object_id.to_s][:free]
+        unless @summary_holdings[solr_record.object_id.to_s][:summary_holdings].include? "error"
+          solr_record.dateStatement=@summary_holdings[solr_record.object_id.to_s][:summary_holdings] #from Jeremy's script
+        end
+      end
       solr_record.language=language(marc_record)
       solr_record.pubDateNotes="temp" #from matchissn
       solr_record.catkey=@catkeys[solr_record.issnPrint] if solr_record.issnPrint
-      #solr_record.dateStatement="temp" #from Jeremy's script
       if marc_record['022'] && @matched_records.include?(marc_record['022']['a'])
         solr_record.updated="updated by sfx2sirsi"
       elsif marc_record['022'] && @bad_dates.include?(marc_record['022']['a'])
@@ -119,6 +125,10 @@ private
       issn = line.split("|").last
       @bad_issns[issn] = line
     end
+  end
+
+  def read_summary_holdings
+    @summary_holdings = eval(File.open("data/summary_holdings").read) 
   end
 
 end

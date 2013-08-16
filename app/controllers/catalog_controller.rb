@@ -94,7 +94,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'ua_link_text', :label=>'Link Text (856z): '
     config.add_show_field 'ua_language', :label=>'Language: '
     config.add_show_field 'ua_freeJournal', :label=>'Free? '
-    config.add_show_field 'ua_dateStatement', :label=>'Coverage: '
+    config.add_show_field 'ua_dateStatement', :label=>'Summary of Holdings: '
     config.add_show_field 'ua_alternateCatKey', :label=>'Alternate Catkey: '
     config.add_show_field 'ua_lastUpdated', :label=>'Last Updated: ' # for incremental updates
     config.add_show_field 'ua_noIssn', :label=>'Title Only (No ISSN): '

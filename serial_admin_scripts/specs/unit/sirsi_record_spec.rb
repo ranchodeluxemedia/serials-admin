@@ -17,6 +17,6 @@ describe "Sirsi Record" do
 
   it "should have the correct xml representation" do
     correct_xml = "<doc><field name=\"id\">55555</field><field name=\"ua_issnPrint\">0001-0001</field><field name=\"ua_catkey\">55555</field><field name=\"ua_link_text\">University of Alberta Access</field><field name=\"ua_inSirsi\">true</field></doc>"
-    @sirsi_record.to_xml.should match correct_xml
+    @sirsi_record.to_xml.should eq correct_xml
   end
 end

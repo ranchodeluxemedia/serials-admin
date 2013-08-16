@@ -33,11 +33,9 @@ class SirsiRecords
   def read_not_in_sfx_file
     @sirsi_records = []
     File.open(@filename).each_line do |line|
-      line = line.gsub("\n", "").gsub("\r", "")
-      split_rec = line.split("|")
+      split_rec = line.gsub("\n", "").gsub("\r", "").split("|")
       rec = {:issn=>split_rec.first, :catkey=>split_rec[2], :link_text=>split_rec[3]}
-      sirsi_record = SirsiRecord.new(rec)
-      @sirsi_records << sirsi_record
+      @sirsi_records << SirsiRecord.new(rec)
     end
   end
 end

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+ <!-- FIRST INCREMENTAL -->
+ <!-- INSTANCE:sfxlcl41 -->
+ <record>
+  <leader>-----nas-a2200000z--4500</leader>
+  <controlfield tag="008">130628uuuuuuuuuxx-uu-|------u|----|eng-d</controlfield>
+  <datafield tag="010" ind1="" ind2="">
+   <subfield code="a">01015589</subfield>
+  </datafield>
+  <datafield tag="245" ind1="" ind2="0">
+   <subfield code="a">Publishers weekly</subfield>
+  </datafield>
+  <datafield tag="260" ind1="" ind2="">
+   <subfield code="a">New York, NY</subfield>
+   <subfield code="b">Reed Business Information</subfield>
+  </datafield>
+  <datafield tag="022" ind1="" ind2="">
+   <subfield code="a">0000-0019</subfield>
+  </datafield>
+  <datafield tag="776" ind1="" ind2="">
+   <subfield code="x">2150-4008</subfield>
+  </datafield>
+  <datafield tag="090" ind1="" ind2="">
+   <subfield code="a">954921332001</subfield>
+  </datafield>
+  <datafield tag="866" ind1="" ind2="">
+   <subfield code="a">Available from 1997. </subfield>
+   <subfield code="b">$obj-&gt;parsedDate('&gt;=','1997',undef,undef)</subfield>
+   <subfield code="c">L</subfield>
+   <subfield code="s">1000000000002159</subfield>
+   <subfield code="t">1000000000001505</subfield>
+   <subfield code="x">Academic Search Complete:Full Text</subfield>
+   <subfield code="z">1000000000671051</subfield>
+  </datafield>
+  <datafield tag="866" ind1="" ind2="">
+   <subfield code="a">Available from 1997. </subfield>
+   <subfield code="s">1000000000001224</subfield>
+   <subfield code="t">1000000000000630</subfield>
+   <subfield code="x">Business Source Complete:Full Text</subfield>
+   <subfield code="z">1000000000125212</subfield>
+  </datafield>
+  <datafield tag="866" ind1="" ind2="">
+   <subfield code="a">Available from 1997. </subfield>
+   <subfield code="s">111038004962001</subfield>
+   <subfield code="t">111038004962000</subfield>
+   <subfield code="x">Canadian Reference Centre:Full Text</subfield>
+   <subfield code="z">111038333129000</subfield>
+  </datafield>
+</record>
+</collection>

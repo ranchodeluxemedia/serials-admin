@@ -777,7 +777,6 @@
         ua_object_id
       </str>
 
-       
        <int name="ps">3</int>
        <float name="tie">0.01</float>
 
